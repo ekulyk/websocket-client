@@ -97,6 +97,10 @@ def _parse_url(url):
 
     if parsed.path:
         resource = parsed.path
+
+        if parsed.query:
+            resource += "?"
+            resource += parsed.query
     else:
         resource = "/"
 
